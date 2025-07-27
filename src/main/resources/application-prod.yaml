@@ -1,4 +1,13 @@
 spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/relatia-crm/config-repo.git
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
   rabbitmq:
     host: "rabbit"
     port: 5672
